@@ -8,9 +8,12 @@
     <title>Sign In to Your Account</title>
 </head>
 <body>
-    <h1>(fake) Netflix</h1>
-    <h2>Sign in</h2>
-    <form action="#">
+    <div class="container">
+    <h1 class="second-background">(fake) Netflix</h1>
+    <br />
+    <h2 class="second-background">Sign in</h2>
+    <br />
+    <form method="post">
         <input type="text" name="username" placeholder="Username" required>
         <br />
         <input type="password" name="password" placeholder="Password" required>
@@ -18,9 +21,11 @@
         <input type="submit" text="Sign In">
     </form>
 
-    <p>Don't have an account? <a href="register.php">Register</a></p>
+    <p class="second-background">Don't have an account? <a href="register.php">Register</a></p>
     <br />
-    <h3>Other options</h3>
-    <p>Change your payment tier <a href="changetier.php">here</a></p>
+    <h3 class="second-background">Other options</h3>
+    <br />
+    <p class="second-background">Change your payment tier <a href="changetier.php">here</a></p>
+    </div>
 </body>
 </html>

@@ -15,8 +15,10 @@
     </script>
 </head>
 <body>
-    <h1>Welcome to fake Netflix</h1>
-    <p>Please fill out your details to register an account</p>
+    <div class="container">
+    <h1 class="second-background">Welcome to fake Netflix</h1>
+    <br />
+    <p class="second-background">Please fill out your details to register an account</p>
 
     <form action="handlenetflix.php" method="post">
         <input type="text" name="username" maxlength="40" placeholder="Create a Username" required />
@@ -35,5 +37,6 @@
         <br />
         <input type="submit" class="submit" text="Let's Go" />
     </form>
+    </div>
 </body>
 </html>

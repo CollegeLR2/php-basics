@@ -12,7 +12,8 @@
         <li><a href="variable-basics.php">PHP variables</a></li>
         <li><a href="enter-details.html">A form</a></li>
         <li><a href="form-activity.html">Worksheet 4 forms</a></li>
-        <li><a href="netflix.php">Netflix</a></li>
+        <li><a href="netflix\index.php">Netflix (also available
+            through fakenetflix.com)</a></li>
     </ul>
 </body>
 </html>
