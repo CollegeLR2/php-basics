@@ -1,0 +1,18 @@
+* {
+    background-color: #90d0ac
+}
+
+input {
+    width: 20em;
+    color: #000000;
+}
+
+.submit {
+    width: 5em;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+::placeholder {
+    color: #000000;
+}

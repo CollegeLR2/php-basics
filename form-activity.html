@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Data Collecting</title>
 </head>
 <body>
     <h1>Registration Form</h1>
     <p>Please complete the following form:</p>
 
-    <form>
-        <label>First name:</label><input type="text" maxlength="40"/>
-        <label>Last name:</label><input type="text" maxlength="40" />
-        <label>Age:</label><input type="text" maxlength="3" />
-        <input type="submit" text="Register Me!" />
+    <form action="handle-form-activity.php" method="post">
+        <input type="text" name="fname" maxlength="40" placeholder="First name" />
+        <br />
+        <input type="text" name="sname" maxlength="40" placeholder="Surname" />
+        <br />
+        <input type="text" name="pet" maxlength="3" placeholder="Pet name" />
+        <br />
+        <input type="text" name="type" maxlength="3" placeholder="Pet type" />
+        <br />
+        <input type="text" name="number" maxlength="4" placeholder="House number" />
+        <br />
+        <input type="text" name="street" maxlength="40" placeholder="Street name" />
+        <br />
+        <input type="text" name="town" maxlength="40" placeholder="Town name" />
+        <br />
+        <input type="text" name="county" maxlength="40" placeholder="County" />
+        <br />
+        <input type="text" name="code" maxlength="10" placeholder="Postcode" />
+        <br />
+        <input type="submit" class="submit" text="Register Me!" />
     </form>
 </body>
 </html>
