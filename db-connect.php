@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Connecting to a database</h1>
+
     <?php
 
     $servername = "localhost";
@@ -15,14 +16,21 @@
     $password = "";
 
     // Create connection
-    $conn = new mysqli($servername, $username, $password, "phpmyadmin");
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: ". $conn->connect_error);
+    try {
+        $conn = new mysqli($servername, $username, $password, "phpmyadmin");
+        echo "Connected";
     }
-    echo "<h2>Connected successfully</h2>";
 
+    // // Check connection
+    // if ($conn->connect_error) {
+    //     die("Connection failed: ". $conn->connect_error);
+    // }
+
+    catch(Exception $conn) {        
+        header("Location: ./error.php");
+    }
+    
     ?>
+
 </body>
 </html>
