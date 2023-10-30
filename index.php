@@ -14,6 +14,8 @@
         <li><a href="form-activity.html">Worksheet 4 forms</a></li>
         <li><a href="netflix\index.php">Netflix (also available
             through fakenetflix.com)</a></li>
+        <li><a href="db-connect.php">Connecting to a database</a></li>
+        <li><a href="add-record.php">Adding a record to a database</a></li>
     </ul>
 </body>
 </html>
