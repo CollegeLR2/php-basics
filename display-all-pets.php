@@ -2,20 +2,11 @@
     and shows an error message if the connection fails to be made -->
 <?php
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+include "library/db.php";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, "pets");
+$conn = connect();
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    // echo "Connected successfully";
-
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">

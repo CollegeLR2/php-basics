@@ -9,17 +9,9 @@
 <body>
     <?php
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+    include "library/db.php";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, "pets");
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: ". $conn->connect_error);
-    }
+    $conn = connect();
     
     $query = "INSERT INTO pets (name, age, type) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($query);

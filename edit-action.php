@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
-</head>
-<body>
-    <?php
+<?php
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+include "library/db.php";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, "pets");
+$conn = connect();
 
-    // Check connection
+$query = "UPDATE pets SET name=?, age=?, type=? WHERE id=?";
+// Prepares the query to prevent SQL injections 
+$stmt = $conn->prepare($query);
+$stmt->bind_param("ssss", $_POST["name"], $_POST["age"], $_POST["type"], $_POST["id"]);
+$stmt->execute();
 
-    ?>
-</body>
-</html>
+header("Location: ./edit-all-pets.php?id={$_POST["id"]}&msg=success");
+
+?>

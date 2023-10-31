@@ -1,19 +1,10 @@
 <!-- This section of PHP creates a connection to the pets database in mySQL
     and shows an error message if the connection fails to be made -->
-    <?php
+<?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
+include "library/db.php";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, "pets");
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-// echo "Connected successfully";
+$conn = connect();
 
 ?>
 
@@ -70,5 +61,12 @@ if ($conn->connect_error) {
     ?>
     <!-- Remembering to close the open table when no more data is being added to it -->
     </table>
+
+<?php if(isset($_GET["msg"]) && $_GET["msg"]=="success"): ?>
+    <div class="success">
+        Updated successful.
+    </div>
+<?php endif ?>
+
 </body>
 </html>

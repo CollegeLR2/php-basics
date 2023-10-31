@@ -1,14 +1,8 @@
 <?php
     
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+    include "library/db.php";
 
-    $conn = new mysqli($servername, $username, $password, "pets");
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    $conn = connect();
 
     $sql = "SELECT * FROM pets WHERE id=?";
     $stmt = $conn->prepare($sql);
@@ -47,6 +41,8 @@
             <input type="submit" value="Update">
         </p>
         <input type="hidden" name="id" value="<?= $pet["id"] ?>">
+    </form>
+
 </body>
 </html>
 
