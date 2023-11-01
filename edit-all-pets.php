@@ -14,7 +14,7 @@ $conn = connect();
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Display Pets Stored in the Pets MySQL Table</title>
+<title>Display Pets Stored in the Pets Table</title>
 <link rel="stylesheet" type="text/css" href="pets-style.css">
 </head>
 <body>
@@ -47,7 +47,7 @@ $conn = connect();
         <!-- Adds a link to edit the data
         The id= links to each id in the database, 
         so only one item is edited.
-        You cannot edit the ID as that must be unique -->
+        You cannot edit the ID as that must be unique. -->
         <td><a href="edit.php?id=<?= $row["id"] ?>">Edit</a></td>
         </tr>
     <?php endwhile;
@@ -64,7 +64,7 @@ $conn = connect();
 
 <?php if(isset($_GET["msg"]) && $_GET["msg"]=="success"): ?>
     <div class="success">
-        Updated successful.
+        Update successful.
     </div>
 <?php endif ?>
 
