@@ -18,6 +18,7 @@
         <li><a href="add-record.php">Adding a record to a database</a></li>
         <li><a href="display-all-pets.php">Display all the data in a database</a></li>
         <li><a href="edit-all-pets.php">Edit the data in the database</a></li>
+        <li><a href="delete-pets.php">Delete the data in the database</a></li>
     </ul>
 </body>
 </html>
