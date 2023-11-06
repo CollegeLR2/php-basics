@@ -1,6 +1,6 @@
 <!-- This section of PHP creates a connection to the pets database in mySQL
     and shows an error message if the connection fails to be made -->
-<?php
+    <?php
 
 include "library/db.php";
 
@@ -37,9 +37,15 @@ $conn = connect();
     // Queries the sql statement against the connected database 
     $result = $conn->query($sql);
     // While there are rows left in the database to "fetch" 
-    while ($row = $result->fetch_array(MYSQLI_ASSOC)): ?>
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)):
+        // Changes the colour of the row that has been updated 
+        if ($row["id"] == $_GET["id"]) {
+            echo "<tr style='background-color: #3c763d; color: #ffffff'>";
+        } else {
+            echo "<tr>";
+        } ?>
+
         <!-- Puts the data into the table  -->
-        <tr>
         <td><?= $row["id"] ?></td>
         <td><?= $row["name"] ?></td>
         <td><?= $row["age"] ?></td>
@@ -62,7 +68,11 @@ $conn = connect();
     <!-- Remembering to close the open table when no more data is being added to it -->
     </table>
 
-
+<?php if(isset($_GET["msg"]) && $_GET["msg"]=="success"): ?>
+    <div class="success">
+        Update successful.
+    </div>
+<?php endif ?>
 
 </body>
 </html>

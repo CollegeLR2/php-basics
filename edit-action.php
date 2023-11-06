@@ -10,6 +10,6 @@ $stmt = $conn->prepare($query);
 $stmt->bind_param("ssss", $_POST["name"], $_POST["age"], $_POST["type"], $_POST["id"]);
 $stmt->execute();
 
-header("Location: ./edit-all-pets.php?id={$_POST["id"]}&msg=success");
+header("Location: ./edit-all-pets-updated.php?id={$_POST["id"]}&msg=success");
 
 ?>
