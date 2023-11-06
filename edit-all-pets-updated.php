@@ -38,13 +38,14 @@ $conn = connect();
     $result = $conn->query($sql);
     // While there are rows left in the database to "fetch" 
     while ($row = $result->fetch_array(MYSQLI_ASSOC)):
-        //<!-- Puts the data into the table  -->
-        if ($row["id"]) {
-            echo "<tr style='background-color: green'>";
+        // Changes the colour of the row that has been updated 
+        if ($row["id"] == $_GET["id"]) {
+            echo "<tr style='background-color: #3c763d; color: #ffffff'>";
         } else {
             echo "<tr>";
         } ?>
 
+        <!-- Puts the data into the table  -->
         <td><?= $row["id"] ?></td>
         <td><?= $row["name"] ?></td>
         <td><?= $row["age"] ?></td>
